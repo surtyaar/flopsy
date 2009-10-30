@@ -104,7 +104,7 @@ class Consumer(object):
         if getattr(self, 'channel'):
             self.channel.close()
         if getattr(self, 'connection'):
-            self.connection.close()
+            self.connection.connection.close()
 
     def wait(self):
         while True:
